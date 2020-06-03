@@ -1,0 +1,29 @@
+---
+tests:
+- case: 验证响应中start和count与请求中的参数一致
+  http:
+    method: GET
+    path: /v2/movie/in_theaters
+    params:
+      apikey: 0df993c66c0c636e29ecbb5344252a4a
+      start:  0
+      count:  10
+  expected:
+    response:
+      title: 正在上映的电影-上海
+      count: 10
+      start: 0
+
+- case: 验证响应中title是"正在上映的电影-北京"
+  http:
+    method: GET
+    path: /v2/movie/in_theaters
+    params:
+      apikey: 0df993c66c0c636e29ecbb5344252a4a
+      start: 1
+      count: 5
+  ecpected:
+    reponse:
+      title: 正在上映的电影-北京
+      count: 5
+      start: 1
