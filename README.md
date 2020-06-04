@@ -1,5 +1,5 @@
 # Interface_Automation
-基于Pytest+Request+Allure的接口自动化开源框架
+基于Pytest+Request+Allure的接口自动化开源框架（yaml篇）
 
 ----
 #### 框架流程
